@@ -4,6 +4,10 @@ Un garaje personal para Android. Kotlin + Jetpack Compose, diseño grafito con a
 
 Pensada inicialmente para un Volkswagen Polo Mk5 1.2 TSI de 90 CV, matriculado en junio de 2013. Permite registrar otros vehículos, con sus historiales y financiación separados. La aplicación empieza vacía: no contiene datos personales ni registros de demostración.
 
+<img src="docs/screenshots/dashboard.png" alt="Polo App en Android: inicio con ilustración del coche, kilometraje y accesos rápidos" width="340">
+
+Captura real del emulador; los valores mostrados son datos de prueba.
+
 ## Instalar y probar
 
 - Android 8.0 o superior, incluido Samsung Galaxy A55.

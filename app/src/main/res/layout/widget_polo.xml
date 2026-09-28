@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp" android:gravity="center_vertical"
+    android:background="#171B24" android:contentDescription="Abrir Polo App">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="POLO APP  /  TU GARAJE" android:textColor="#FF6576" android:textSize="10sp"
+        android:fontFamily="sans-serif-medium" android:letterSpacing="0.1" android:includeFontPadding="false" />
+    <TextView android:id="@+id/widget_name" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="6dp" android:text="Tu coche, al día" android:textColor="#F6F7FA"
+        android:textSize="14sp" android:maxLines="1" android:ellipsize="end" android:includeFontPadding="false" />
+    <TextView android:id="@+id/widget_km" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="2dp" android:text="Abre tu garaje" android:textColor="#FFFFFF"
+        android:textSize="27sp" android:fontFamily="sans-serif-medium" android:maxLines="1" android:ellipsize="end" android:includeFontPadding="false" />
+    <TextView android:id="@+id/widget_itv" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="6dp" android:text="ITV · Pendiente de registrar" android:textColor="#C4CCDA"
+        android:textSize="12sp" android:maxLines="1" android:ellipsize="end" android:includeFontPadding="false" />
+    <TextView android:id="@+id/widget_service" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="3dp" android:text="Mantenimiento · Añade una referencia" android:textColor="#C4CCDA"
+        android:textSize="12sp" android:maxLines="1" android:ellipsize="end" android:includeFontPadding="false" />
+</LinearLayout>
