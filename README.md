@@ -12,7 +12,7 @@ Captura real del emulador; los valores mostrados son datos de prueba.
 
 - Android 8.0 o superior, incluido Samsung Galaxy A55.
 - En [Actions](https://github.com/Callankan/ChatGPT-PoloApp/actions), abre la última ejecución correcta de **Android · Build & checks** y descarga el artefacto **Polo-App-debug**. Descomprime el ZIP e instala el APK en tu móvil. GitHub puede pedir iniciar sesión para descargar artefactos.
-- Esta es una primera versión instalable de desarrollo (`0.1.0`), no una publicación en Google Play. Android pedirá permitir la instalación desde la aplicación desde la que abras el APK.
+- Esta es una primera versión instalable de desarrollo (`0.1.1`), no una publicación en Google Play. Android pedirá permitir la instalación desde la aplicación desde la que abras el APK.
 - Para empezar, registra el coche y el kilometraje inicial. Configura tu préstamo, los vencimientos y los datos del último mantenimiento. Activa las notificaciones en **Garaje → Ajustes**.
 - Los APK de distintas compilaciones de desarrollo pueden usar claves distintas. Antes de desinstalar para cambiar de versión, exporta una copia completa.
 
@@ -31,7 +31,7 @@ Captura real del emulador; los valores mostrados son datos de prueba.
 | Guantera y ficha | Documentos locales, especificaciones introducidas desde el manual, medidas, presiones, aceite, motor y bombillas. |
 | PDF | Informe de reventa paginado con kilometraje, talleres, mantenimientos, piezas, ITV, daños y fotografías opcionales. Opciones para precios y datos identificativos. Excluye siempre financiación, notas, pólizas y documentos privados. |
 | Copias y widget | ZIP completo con vehículos, registros y adjuntos; restauración validada y transaccional. Widget del vehículo seleccionado con km, ITV y mantenimiento. |
-| Apariencia | Oscuro, claro o sistema; Manrope y Space Grotesk incluidas, ilustración original del coche en Compose Canvas, transiciones y estados vacíos. |
+| Apariencia | Oscuro, claro o sistema; Manrope y Space Grotesk incluidas, imagen realista del Polo e icono de coche rojo, incluidos sin conexión, transiciones y estados vacíos. |
 
 ## Compilar
 
@@ -55,7 +55,7 @@ app/src/main/java/com/poloapp/
 ├── ui/
 │   ├── screens/   Inicio, Repostajes, Taller, Finanzas y Garaje
 │   ├── forms/     Edición de registros, vehículo, reglas y simulador
-│   ├── components/  Tarjetas, gráficas e ilustración nativa
+│   ├── components/  Tarjetas, gráficas e imagen del coche
 │   └── theme/     Colores y tipografía
 ├── platform/      PDF, ZIP, WorkManager y widget
 ├── PoloViewModel.kt  Estado observable y coordinación de operaciones
@@ -75,4 +75,4 @@ Más detalles en [arquitectura](docs/ARCHITECTURE.md), [privacidad](docs/PRIVACY
 - Las copias ZIP incluyen deuda y datos privados y **no están cifradas**. No las subas al repositorio. Desinstalar borra el historial local: exporta una copia antes.
 - Los interruptores del PDF controlan los campos estructurados. Las fotos y el texto libre no se censuran automáticamente; revisa el documento antes de compartirlo.
 
-Tipografías bajo SIL Open Font License: [Manrope](docs/Manrope-OFL.txt) y [Space Grotesk](docs/SpaceGrotesk-OFL.txt). La ilustración y el icono son gráficos originales. La fotografía de referencia no se redistribuye. Polo App es un proyecto independiente, sin afiliación con Volkswagen.
+Tipografías bajo SIL Open Font License: [Manrope](docs/Manrope-OFL.txt) y [Space Grotesk](docs/SpaceGrotesk-OFL.txt). La imagen del coche y el icono se generaron para la app; [prompts y recursos](docs/design/ASSETS.md). La fotografía de referencia no se redistribuye. Polo App es un proyecto independiente, sin afiliación con Volkswagen.

@@ -220,7 +220,7 @@ private fun VehicleHero(data: ScreenData, onAction: (String) -> Unit) {
             }
             IconButton(onClick = { onAction("switchVehicle") }) { Icon(Icons.Outlined.SwapHoriz, "Cambiar de vehículo", tint = colors.onSurfaceVariant) }
         }
-        PoloArtwork(Modifier.fillMaxWidth().height(124.dp).padding(horizontal = 7.dp))
+        PoloArtwork(Modifier.fillMaxWidth().height(160.dp).padding(horizontal = 12.dp))
         Row(Modifier.fillMaxWidth().padding(start = 22.dp, end = 16.dp, bottom = 22.dp, top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
                 Eyebrow("Kilómetros compartidos")

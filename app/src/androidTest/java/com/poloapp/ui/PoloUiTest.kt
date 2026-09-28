@@ -103,16 +103,22 @@ class PoloUiTest {
     }
 
     @Test fun dashboard_savesVisualReviewScreenshot() {
+        val mode = mutableStateOf("dark")
         compose.setContent {
-            PoloTheme {
+            PoloTheme(mode.value) {
                 MainScreens(demo, car, "home", onSection = {}, onAdd = {}, onEdit = {}, onAction = {})
             }
         }
         compose.onNodeWithText("Tu próxima aventura.").assertIsDisplayed()
         compose.waitForIdle()
         val context = InstrumentationRegistry.getInstrumentation().targetContext
-        val output = File(context.getExternalFilesDir(null), "polo-dashboard.png")
-        val bitmap = compose.onRoot().captureToImage().asAndroidBitmap()
-        output.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        listOf("dark", "light").forEach { theme ->
+            compose.runOnIdle { mode.value = theme }
+            compose.waitForIdle()
+            val suffix = if (theme == "dark") "" else "-light"
+            val output = File(context.getExternalFilesDir(null), "polo-dashboard$suffix.png")
+            val bitmap = compose.onRoot().captureToImage().asAndroidBitmap()
+            output.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        }
     }
 }

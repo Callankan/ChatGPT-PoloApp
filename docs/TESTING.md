@@ -1,5 +1,9 @@
 # Pruebas
 
+## Actualización visual · 0.1.1
+
+APK compilado y Android Lint sin errores. Las cuatro pruebas de interfaz existentes pasan en el emulador Android 16. Capturas revisadas en modo oscuro y claro, con datos sintéticos. Imagen transparente del Polo integrada en Inicio y bienvenida; icono adaptativo sustituido por el coche rojo simple. No se ha modificado la base de datos.
+
 ## Resultado de esta entrega · 28 de septiembre de 2026
 
 Verificación local completada con `testDebugUnitTest lintDebug connectedDebugAndroidTest assembleDebug`:
